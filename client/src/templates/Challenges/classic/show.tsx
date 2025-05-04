@@ -630,7 +630,10 @@ function ShowClassic({
 
 ShowClassic.displayName = 'ShowClassic';
 
+//export default connect(mapStateToProps, mapDispatchToProps)(ShowClassic);
+export { ShowClassic }; // <-- add this line to export the raw component
 export default connect(mapStateToProps, mapDispatchToProps)(ShowClassic);
+
 
 export const query = graphql`
   query ClassicChallenge($id: String!) {
